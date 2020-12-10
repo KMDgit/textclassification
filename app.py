@@ -16,7 +16,7 @@ class MakePrediction(Resource):
         posted_data = request.get_json()
         text = posted_data['text']
 
-        prediction = model.predict([[text]])[0]
+        prediction = model.predict([text])
        
 
         return jsonify({
